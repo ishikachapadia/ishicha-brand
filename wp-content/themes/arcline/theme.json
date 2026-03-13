@@ -177,6 +177,23 @@
 						"bottom": "1.5rem"
 					}
 				}
+			},
+			"core/math": {
+				"color": {
+					"text": "#000000"
+				},
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--system-font)",
+					"fontSize": "1.1rem",
+					"fontWeight": "500",
+					"lineHeight": "1.4",
+					"letterSpacing": "-0.02em"
+				},
+				"spacing": {
+					"margin": {
+						"bottom": "1.5rem"
+					}
+				}
 			}
 		}
 	}

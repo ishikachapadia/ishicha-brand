@@ -118,6 +118,35 @@
 						"left": "0px"
 					}
 				}
+			},
+			"core/code": {
+				"border": {
+					"color": "#000000",
+					"style": "solid",
+					"width": "4px"
+				},
+				"color": {
+					"text": "#000000",
+					"background": "var(--wp--preset--color--primary)"
+				},
+				"typography": {
+					"fontFamily": "monospace",
+					"fontSize": "1.1rem",
+					"fontWeight": "700",
+					"lineHeight": "1.4"
+				},
+				"spacing": {
+					"padding": {
+						"top": "2rem",
+						"bottom": "2rem",
+						"left": "2rem",
+						"right": "2rem"
+					},
+					"margin": {
+						"bottom": "3rem",
+						"top": "2rem"
+					}
+				}
 			}
 		}
 	}

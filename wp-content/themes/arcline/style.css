@@ -15,3 +15,66 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Generated on fullsiteediting.com. No code version.
 */
+
+/* --- L'ECLAT EDITORIAL HEADER --- */
+.eclat-header {
+    width: 100% !important;
+    background: #ffffff !important;
+    border-bottom: 5px solid #000000 !important;
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    min-height: 80px;
+}
+
+.logo-box {
+    padding: 1.5rem 2.5rem;
+    border-right: 5px solid #000000;
+    display: flex;
+    align-items: center;
+}
+
+.brand-logo {
+    margin: 0 !important;
+    font-size: 2.5rem !important;
+    font-weight: 900 !important;
+    text-transform: uppercase !important;
+    letter-spacing: -0.07em !important;
+    line-height: 1 !important;
+}
+
+.brand-logo a {
+    text-decoration: none !important;
+    color: #000000 !important;
+}
+
+.editorial-nav {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2.5rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 3rem;
+}
+
+.nav-item, .cart-link {
+    text-decoration: none !important;
+    color: #000000 !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    font-size: 0.8rem !important;
+    letter-spacing: 0.2em !important;
+}
+
+.cart-link {
+    background: #000 !important;
+    color: #fff !important;
+    padding: 0.8rem 1.5rem !important;
+}

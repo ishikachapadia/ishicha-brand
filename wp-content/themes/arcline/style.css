@@ -326,3 +326,52 @@ body {
     }
 }
 
+/* --- THE PRETTY ARC & LINE PINK DROPDOWN --- */
+
+.woocommerce-ordering {
+    margin-bottom: 40px;
+}
+
+select.orderby {
+    appearance: none;
+    -webkit-appearance: none;
+    
+    /* Clean White Base with Pink Border */
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border: 3px solid #FF1493 !important; /* Pink Border */
+    border-radius: 0 !important;
+    
+    /* Refined Typography */
+    font-size: 11px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    
+    /* Spacing & Sizing */
+    padding: 12px 45px 12px 20px !important;
+    min-width: 220px;
+    cursor: pointer;
+    box-shadow: 4px 4px 0px #FF1493; /* Pink Shadow */
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    /* Custom Icon: Minimalist Pink Chevron */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23FF1493' stroke-width='4' stroke-linecap='square' stroke-linejoin='miter'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+}
+
+/* Hover Interaction: Shifts to Yellow (The Logo Match) */
+select.orderby:hover {
+    background-color: #FFD700 !important; /* Swaps to your brand Yellow */
+    border-color: #000000 !important;
+    box-shadow: 6px 6px 0px #000000;
+    transform: translate(-2px, -2px);
+    /* Arrow stays black for contrast on yellow */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='4' stroke-linecap='square' stroke-linejoin='miter'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+}
+
+/* Clean Focus state */
+select.orderby:focus {
+    outline: none;
+}

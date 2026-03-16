@@ -376,3 +376,150 @@ select.orderby:hover {
 select.orderby:focus {
     outline: none;
 }
+
+.wc-block-cart-items__header {
+    border-bottom: 5px solid #000 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 900;
+}
+
+.wc-block-cart__submit-button {
+    background-color: #FF1493 !important;
+    color: #fff !important;
+    border: 3px solid #000 !important;
+    border-radius: 0 !important;
+    font-weight: 900 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.2em !important;
+    padding: 20px !important;
+    box-shadow: 6px 6px 0px #000 !important;
+    transition: all 0.2s ease !important;
+}
+
+.wc-block-cart__submit-button:hover {
+    transform: translate(-3px, -3px) !important;
+    box-shadow: 9px 9px 0px #000 !important;
+    background-color: #FFD700 !important; 
+    color: #000 !important;
+}
+
+.wc-block-components-product-name {
+    color: #FF1493 !important;
+    font-weight: 800 !important;
+    text-transform: uppercase;
+}
+
+.wc-block-components-totals-coupon__button {
+    color: #000 !important;
+    font-weight: 700 !important;
+    text-decoration: underline !important;
+}
+
+h2.wc-block-cart__totals-title {
+    font-size: 3rem !important; 
+    font-weight: 900 !important;
+    text-transform: uppercase !important;
+    line-height: 0.9 !important;
+    margin-bottom: 1.5rem !important;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    color: #FF1493 !important; 
+    -webkit-text-stroke: 1.5px #000000; 
+    text-shadow: 4px 4px 0px #000000; 
+    transition: all 0.3s ease;
+}
+
+h2.wc-block-cart__totals-title:hover {
+    color: #ffffff !important;
+    text-shadow: 6px 6px 0px #FF1493; 
+    -webkit-text-stroke: 1.5px #000000;
+    transform: skewX(-5deg); 
+}
+
+.wc-block-components-totals-coupon__input {
+    margin-bottom: 10px !important;
+}
+
+.wc-block-components-totals-coupon__input input {
+    border: 3px solid #000 !important;
+    border-radius: 0 !important;
+    padding: 15px !important;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: all 0.3s ease;
+    background: #fff !important;
+}
+
+.wc-block-components-totals-coupon__input input:focus {
+    box-shadow: 5px 5px 0px #FF1493 !important; 
+    border-color: #FF1493 !important;
+    outline: none;
+}
+
+.wc-block-components-totals-coupon__button {
+    background-color: #FFD700 !important;
+    color: #000 !important;
+    border: 3px solid #000 !important;
+    border-radius: 0 !important;
+    font-weight: 900 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.2em !important;
+    padding: 12px !important;
+    width: 100% !important;
+    box-shadow: 4px 4px 0px #000 !important;
+    transition: all 0.2s ease !important;
+    opacity: 1 !important; 
+    cursor: pointer !important;
+}
+
+.wc-block-components-totals-coupon__button:hover {
+    background-color: #FF1493 !important;
+    color: #fff !important;
+    transform: translate(-2px, -2px);
+    box-shadow: 7px 7px 0px #000 !important;
+}
+
+.wc-block-components-totals-coupon__button[disabled] {
+    background-color: #eee !important;
+    border-color: #ccc !important;
+    box-shadow: none !important;
+    color: #999 !important;
+    pointer-events: none;
+}
+
+.wc-block-components-product-name {
+    display: inline-block !important;
+    font-size: 1.2rem !important;
+    font-weight: 900 !important;
+    text-transform: uppercase !important;
+    color: #000000 !important;
+    text-decoration: none !important;
+    line-height: 1.1 !important;
+    margin-bottom: 5px !important;
+    transition: all 0.3s ease !important;
+}
+
+.wc-block-components-product-name:hover {
+    color: #FF1493 !important; 
+    -webkit-text-stroke: 1px #000; 
+    transform: translateX(5px); 
+}
+
+.wc-block-components-product-price {
+    font-family: inherit !important;
+    font-weight: 700 !important;
+    font-size: 1rem !important;
+    color: #FF1493 !important; 
+    letter-spacing: 0.05em !important;
+}
+
+.wc-block-components-product-metadata {
+    font-size: 11px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.1em !important;
+    font-weight: 600 !important;
+    color: #666 !important;
+    margin-top: 10px !important;
+}
+

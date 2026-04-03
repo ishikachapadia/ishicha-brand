@@ -27,7 +27,7 @@ body {
     width: 100%;
 }
 
-/** Styling for the header */
+/** HEADER STYLES */
 .eclat-header {
     width: 100%;
     background: #ffffff;
@@ -52,11 +52,10 @@ body {
     display: flex;
     align-items: center;
     transition: all 0.3s ease;
+    z-index: 1001; 
 }
 
-.logo-box:hover {
-    background: #FF1493;
-}
+.logo-box:hover { background: #FF1493; }
 
 .brand-logo {
     margin: 0;
@@ -67,23 +66,28 @@ body {
     line-height: 1;
 }
 
-.brand-logo a {
-    text-decoration: none;
-    color: #000000;
-}
+.brand-logo a { text-decoration: none; color: #000000; }
 
-.editorial-nav {
-    display: flex;
-    flex-grow: 1;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2.5rem;
-}
+    .menu-toggle { display: none; }
 
-.nav-links {
-    display: flex;
-    gap: 3rem;
-}
+    .editorial-nav {
+        display: flex;
+        flex-grow: 1;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2.5rem;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 3rem;
+    }
+
+    .nav-utility {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
 
 .nav-item {
     text-decoration: none;
@@ -100,61 +104,125 @@ body {
 .nav-item::after {
     content: '';
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0%; 
-    height: 3px;
+    bottom: 0; left: 0;
+    width: 0%; height: 3px;
     background-color: #FF1493; 
     transition: width 0.3s cubic-bezier(0.65, 0, 0.35, 1); 
 }
 
-.nav-item:hover {
-    color: #FF1493; 
-}
-
-.nav-item:hover::after {
-    width: 100%; 
-}
-
-.nav-utility {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
+.nav-item:hover { color: #FF1493; }
+.nav-item:hover::after { width: 100%; }
 
 .utility-item {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 45px;
-    height: 45px;
+    width: 45px; height: 45px;
     text-decoration: none;
     color: #000;
     background: #fff;
     border: 3px solid #000;
     transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    position: relative;
 }
 
-.utility-item i {
-    font-size: 1.4rem;
-    -webkit-text-stroke: 0.5px; 
+/* Allow the cart box to expand for the text */
+.utility-item.cart-link {
+    width: auto !important; /* Let it grow */
+    padding: 0 15px; /* Give the text some breathing room */
+    gap: 8px; /* Space between the icon and "BAG (0)" */
 }
 
-.utility-item:not(.cart-btn):hover {
-    color: #FF1493;
-    border-color: #FF1493;
-    transform: translateY(-2px);
+/* Ensure the text stays on one line and looks clean */
+.cart-count {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    white-space: nowrap; /* Prevents the text from stacking */
 }
 
-.cart-btn {
-    background: #FF1493;
-    color: #fff;
+/* Keep the person icon as a consistent square */
+.user-link {
+    flex-shrink: 0;
 }
+@media (max-width: 992px) {
+    .header-wrapper { 
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: stretch !important;
+        min-height: 70px;
+        width: 100%;
+    }  
 
-.cart-btn:hover {
-    background: #FFD700;
-    color: #000;
+.logo-box { 
+        flex: 1; /* Allows it to grow but not push others out */
+        padding: 1rem 1.5rem; 
+        border-right: 5px solid #000; /* Keep the vertical line */
+        justify-content: center; /* Centers "ARC&LINE" text */
+    }
+
+    .brand-logo { 
+        font-size: 1.6rem !important; /* Slightly smaller for mobile fit */
+    }
+
+    /* 3. The Hamburger Button Fix */
+    .menu-toggle {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+        background: #000;
+        border: none;
+        width: 80px; /* Fixed width */
+        height: auto;
+        cursor: pointer;
+        z-index: 1001;
+        padding: 0;
+        flex-shrink: 0; /* Prevents it from being squished */
+    }
+
+    .bar {
+        width: 28px;
+        height: 3px;
+        background: #FFD700;
+    }
+
+    .editorial-nav {
+        display: flex; 
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100vh;
+        background: #ffffff;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(100%); 
+        transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+        z-index: 1000;
+    }
+
+    .editorial-nav.is-open { transform: translateX(0); }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .nav-utility {
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .nav-item { font-size: 1.5rem !important; }
+
+    /* Animation */
+    .menu-toggle.active .bar:nth-child(1) { transform: translateY(9px) rotate(45deg); background: #FF1493; }
+    .menu-toggle.active .bar:nth-child(2) { opacity: 0; }
+    .menu-toggle.active .bar:nth-child(3) { transform: translateY(-9px) rotate(-45deg); background: #FF1493; }
 }
 
 /** Styling for the footer */
@@ -1242,3 +1310,5 @@ button.wpforms-submit:hover {
     background-color: #FF1493;
     color: #fff;
 }
+
+

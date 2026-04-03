@@ -14,6 +14,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Generated on fullsiteediting.com. No code version.
 */
 
+/* ! There is a lot of custom css here because I wanted to change everything according to 
+! the brand's style. All css is well commented and organized though. */
+
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -24,10 +27,11 @@ body {
     width: 100%;
 }
 
+/** Styling for the header */
 .eclat-header {
-    width: 100% !important;
-    background: #ffffff !important;
-    border-bottom: 5px solid #000000 !important;
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 5px solid #000000;
     position: sticky;
     top: 0;
     z-index: 999;
@@ -55,17 +59,17 @@ body {
 }
 
 .brand-logo {
-    margin: 0 !important;
-    font-size: 2.5rem !important;
-    font-weight: 900 !important;
-    text-transform: uppercase !important;
-    letter-spacing: -0.07em !important;
-    line-height: 1 !important;
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.07em;
+    line-height: 1;
 }
 
 .brand-logo a {
-    text-decoration: none !important;
-    color: #000000 !important;
+    text-decoration: none;
+    color: #000000;
 }
 
 .editorial-nav {
@@ -82,12 +86,12 @@ body {
 }
 
 .nav-item {
-    text-decoration: none !important;
-    color: #000000 !important;
-    font-weight: 700 !important;
-    text-transform: uppercase !important;
-    font-size: 0.8rem !important;
-    letter-spacing: 0.2em !important;
+    text-decoration: none;
+    color: #000000;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
     position: relative; 
     padding: 5px 0;
     transition: color 0.3s ease;
@@ -153,6 +157,7 @@ body {
     color: #000;
 }
 
+/** Styling for the footer */
 .arcline-footer {
     background: #ffffff;
     border-top: 5px solid #000;
@@ -1235,5 +1240,5 @@ button.wpforms-submit:hover {
 
 .wp-block-query-pagination-numbers a:hover {
     background-color: #FF1493;
-    color: #fff !important;
+    color: #fff;
 }

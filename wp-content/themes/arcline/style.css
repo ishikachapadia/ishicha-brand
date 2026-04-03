@@ -1177,7 +1177,7 @@ button.wpforms-submit:hover {
     box-shadow: 10px 10px 0px #000 !important;
 }
 
-/* * Styling for the "Read More" block on blog post */
+/** Styling for the "Read More" block on blog post */
 .wp-block-read-more {
     display: block;
     width: fit-content;
@@ -1203,4 +1203,37 @@ button.wpforms-submit:hover {
 
 .wp-block-read-more:active {
     transform: translateY(0);
+}
+
+/** Styling for the pagination on blog post archive pages */
+.wp-block-query-pagination {
+    margin-bottom: 4rem;
+    justify-content: center;
+    display: flex;
+    gap: 1.5rem;
+    border-top: 1px solid #eee; 
+    padding-top: 3rem;
+}
+
+.wp-block-query-pagination-numbers a, 
+.wp-block-query-pagination-numbers span {
+    font-family: monospace; 
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 8px 12px;
+    color: #000;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.wp-block-query-pagination-numbers .current {
+    font-weight: 900;
+    border: 2px solid #000; 
+    background: transparent;
+}
+
+.wp-block-query-pagination-numbers a:hover {
+    background-color: #FF1493;
+    color: #fff !important;
 }

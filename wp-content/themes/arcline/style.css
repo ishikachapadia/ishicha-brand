@@ -1171,6 +1171,33 @@ button.woocommerce-form-login__submit:hover {
     border-color: #FF1493 !important;
 }
 
+.wpforms-form .wpforms-field-row,
+.wpforms-form .wpforms-field-row-block,
+.wpforms-form .wpforms-one-half,
+.wpforms-form .wpforms-one-third,
+.wpforms-form .wpforms-one-fourth,
+.wpforms-form .wpforms-field-large,
+.wpforms-form .wpforms-field-medium,
+.wpforms-form .wpforms-field-small {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    float: none !important;
+    clear: both !important;
+    box-sizing: border-box;
+}
+
+.wpforms-form .wpforms-field-row {
+    display: block !important;
+}
+
+.wpforms-form .wpforms-field-row-block {
+    display: block !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
 .wpforms-field-label {
     display: block !important;
     font-weight: 900 !important;
@@ -1602,5 +1629,200 @@ button.wpforms-submit:hover {
         max-height: 100% !important;
         width: auto !important;
         object-fit: contain !important;
+    }
+}
+
+/* --- PRIVACY POLICY PAGE: BRUTALIST LAYOUT --- */
+
+/* 1. Main Container: The Columns Block */
+.wp-block-columns.is-layout-flex {
+    border: 3px solid #000 !important;
+    padding: 40px !important;
+    background: #fff !important;
+    box-shadow: 15px 15px 0px #000 !important;
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+}
+
+/* 2. Left Column: Sticky Sidebar Navigation */
+.wp-block-column.is-layout-flow[style*="flex-basis:33.33%"] {
+    position: sticky !important;
+    top: 50px;
+    height: fit-content;
+    border-right: 2px solid #000;
+    padding-right: 30px !important;
+}
+
+/* 3. Sidebar Links: Industrial List Style */
+.wp-block-list li a {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000;
+    display: block;
+    padding: 10px 0;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.wp-block-list li a:hover {
+    color: #FFB800; /* Your brand yellow */
+    padding-left: 10px;
+    border-bottom: 1px solid #000;
+}
+
+/* 4. Right Column: Content Area Headers */
+.wp-block-heading[id^="section"] {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 900 !important;
+    text-transform: uppercase !important;
+    font-size: 1.6rem !important;
+    background: #000;
+    color: #fff;
+    padding: 10px 20px !important;
+    display: inline-block;
+    margin-top: 40px !important;
+    margin-bottom: 20px !important;
+    letter-spacing: -0.02em;
+}
+
+
+
+/* 6. Responsive Adjustments for Tablet/Mobile */
+@media (max-width: 1024px) {
+    .wp-block-columns.is-layout-flex {
+        flex-direction: column !important;
+        padding: 20px !important;
+    }
+
+    .wp-block-column.is-layout-flow[style*="flex-basis:33.33%"] {
+        position: relative !important;
+        top: 0 !important;
+        border-right: none !important;
+        border-bottom: 2px solid #000;
+        padding-right: 0 !important;
+        padding-bottom: 20px !important;
+        margin-bottom: 30px !important;
+    }
+    
+    .wp-block-heading[id^="section"] {
+        font-size: 1.3rem !important;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    html, body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    img,
+    video,
+    iframe,
+    svg {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    .wp-block-columns,
+    .wp-block-columns.is-layout-flex,
+    .wp-block-column,
+    .wp-block-group,
+    .wp-block-cover,
+    .wp-block-media-text,
+    .wp-block-post-template,
+    .wp-block-query,
+    .wp-block-post {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex-direction: column !important;
+    }
+
+    .wp-block-columns.is-layout-flex,
+    .wp-block-group,
+    .wp-block-cover,
+    .wp-block-media-text {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    .wp-block-column,
+    .wp-block-column.has-border-color,
+    .wp-block-columns.has-border-color {
+        min-width: 100% !important;
+    }
+
+    .wp-block-heading,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        word-break: break-word;
+        overflow-wrap: anywhere;
+    }
+
+    .wp-block-table,
+    table {
+        display: block;
+        width: 100% !important;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .wp-block-table table,
+    table {
+        min-width: 100%;
+    }
+
+    .woocommerce-form-login,
+    .wpforms-container,
+    .wc-block-checkout__contact-fields,
+    .wc-block-checkout__shipping-address-block,
+    .wc-block-checkout__shipping-methods-block,
+    .wc-block-checkout__payment-block,
+    .wc-block-order-confirmation-summary {
+        max-width: 100% !important;
+        padding: 1.25rem !important;
+        box-sizing: border-box;
+    }
+
+    .woocommerce-form-login input.input-text,
+    .wpforms-form input[type="text"],
+    .wpforms-form input[type="email"],
+    .wpforms-form textarea,
+    .wc-block-components-totals-coupon__input input,
+    select.orderby {
+        width: 100% !important;
+        min-width: 0 !important;
+        box-sizing: border-box;
+    }
+
+    .woocommerce-tabs ul.tabs,
+    .woocommerce-MyAccount-navigation ul,
+    .footer-legal,
+    .social-icons,
+    .nav-utility {
+        flex-wrap: wrap;
+    }
+
+    .woocommerce-orders-table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .is-layout-carousel .wc-block-product {
+        flex: 0 0 100% !important;
+        min-width: 100% !important;
+    }
+
+    .wc-block-product,
+    .wc-block-grid__product {
+        max-width: 100% !important;
+        min-width: 100% !important;
     }
 }

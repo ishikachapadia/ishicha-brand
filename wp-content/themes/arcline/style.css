@@ -1405,4 +1405,202 @@ button.wpforms-submit:hover {
         line-height: 1.4 !important;
     }
 }
+/* 1. THE CARD: Modern Editorial Look */
+.wc-block-product {
+    border: 1.5px solid #000; /* Thinner, cleaner lines */
+    padding: 0px; /* Remove default padding to let image hit the edge */
+    background: #fff;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1); /* Smoother animation */
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
 
+.wc-block-product:hover {
+    transform: translateY(-8px);
+    box-shadow: 15px 15px 0px #FFB800; /* Sharp, offset shadow */
+    border-color: #000;
+}
+
+/* 2. THE IMAGE: Full-bleed and Framed */
+.wc-block-grid__product-image {
+    padding: 30px;
+    border-bottom: 1.5px solid #000;
+    margin-bottom: 0 !important;
+    transition: transform 0.6s ease;
+}
+
+.wc-block-product:hover .wc-block-grid__product-image {
+    background: #fff;
+}
+
+/* 3. CONTENT WRAPPER: Inner Padding */
+/* This prevents the text from hitting the borders */
+.wc-block-product-template > li,
+.wc-block-grid__product {
+    display: flex;
+    flex-direction: column;
+}
+
+.wc-block-grid__product-title, 
+.wc-block-grid__product-price,
+.wp-block-add-to-cart-form {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* 4. THE TITLE: High-Contrast Branding */
+.wc-block-grid__product-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900 !important;
+    text-transform: uppercase;
+    letter-spacing: -0.05em; /* Tighter kerning for editorial feel */
+    font-size: 1.4rem !important;
+    line-height: 0.95;
+    margin-top: 20px !important;
+    
+    margin-bottom: 8px !important;
+    color: #000;
+}
+
+/* 5. THE PRICE: Tech-Chic Mono */
+.wc-block-grid__product-price {
+    font-family: 'Space Mono', monospace;
+    font-weight: 500;
+    color: #FF1493 !important; 
+    font-size: 1.1rem !important;
+    margin-bottom: 15px !important;
+    display: block;
+}
+
+/* 6. THE BUTTON: Streetwear Label Style */
+.wp-block-add-to-cart-form {
+    margin-top: auto;
+    padding-bottom: 20px;
+}
+
+.wp-block-add-to-cart-form .wp-block-button__link {
+    background-color: #000 !important; /* Switch to black for a more "expensive" look */
+    color: #FFB800 !important; /* Yellow text */
+    border: none !important;
+    border-radius: 0px !important;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 15px 0px !important;
+    width: 100%;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.wp-block-add-to-cart-form .wp-block-button__link:hover {
+    background-color: #FFB800 !important;
+    color: #000 !important;
+    box-shadow: inset 0 0 0 2px #000; /* Inset border effect */
+}
+
+/* 7. CAROUSEL DOTS: Minimalist */
+.is-layout-carousel .dot {
+    width: 40px !important; /* Longer bars instead of dots */
+    height: 3px !important;
+    background: #e0e0e0 !important;
+    opacity: 1;
+}
+
+.is-layout-carousel .dot.is-active {
+    background: #000 !important;
+    width: 60px !important;
+}
+/* --- CONSOLIDATED RESPONSIVE (FOR TABLET & MOBILE) --- */
+/* --- TABLET (Up to 1024px) --- */
+@media (max-width: 1024px) {
+    /* 1. Force exactly 2 cards and consistent box shadow */
+    .is-layout-carousel .wc-block-product {
+        flex: 0 0 calc(50% - 20px) !important; 
+        min-width: calc(50% - 20px) !important;
+        margin-right: 20px !important;
+        box-shadow: 8px 8px 0px #FFB800;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    /* 2. Target that giant H1 header on tablet too */
+    h1.wp-block-post-title.has-medium-font-size,
+    .wc-block-grid__product-title,
+    h1.has-text-align-center.wp-block-post-title {
+        font-size: 1.2rem !important;
+        line-height: 1.1 !important;
+        height: 2.2em !important; /* Locks height for consistency */
+        margin-top: 10px !important;
+        padding: 0 15px !important;
+        display: -webkit-box !important;
+        -webkit-line-clamp: 2 !important;
+        -webkit-box-orient: vertical !important;
+        overflow: hidden !important;
+    }
+
+    /* 3. Push button to bottom */
+    .wp-block-add-to-cart-form {
+        margin-top: auto !important;
+        padding-bottom: 20px !important;
+    }
+}
+
+/* --- MOBILE PHONE (Up to 768px) --- */
+@media (max-width: 768px) {
+    /* 1. Target the H1 specifically to kill the 56px size */
+    h1.wp-block-post-title.has-medium-font-size,
+    .wc-block-grid__product-title,
+    h1.has-text-align-center.wp-block-post-title {
+        font-size: 1rem !important; /* Even smaller for mobile */
+        line-height: 1 !important;
+        text-transform: uppercase !important;
+        margin-top: 10px !important;
+        margin-bottom: 5px !important;
+        
+        /* THE ALIGNMENT LOCK */
+        display: -webkit-box !important;
+        -webkit-line-clamp: 2 !important;
+        -webkit-box-orient: vertical !important;
+        overflow: hidden !important;
+        min-height: 2.1em !important; 
+        max-height: 2.1em !important;
+    }
+
+    /* 2. Card consistency */
+    .wc-block-product {
+        flex: 0 0 100% !important;
+        min-width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        height: 100% !important;
+        min-height: 400px !important;
+        box-shadow: 6px 6px 0px #FFB800 !important;
+    }
+
+    /* 3. Button alignment */
+    .wp-block-add-to-cart-form {
+        margin-top: auto !important;
+        padding-bottom: 15px !important;
+    }
+
+    /* 4. Image area consistency */
+    .wc-block-product-image, 
+    [data-block-name="woocommerce/product-image"],
+    .wc-block-grid__product-image {
+        height: 180px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        overflow: hidden !important;
+        padding: 10px !important;
+    }
+
+    .wc-block-product-image img, 
+    .wc-block-grid__product-image img {
+        max-height: 100% !important;
+        width: auto !important;
+        object-fit: contain !important;
+    }
+}

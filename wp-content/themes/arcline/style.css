@@ -17,6 +17,8 @@ Generated on fullsiteediting.com. No code version.
 /* ! There is a lot of custom css here because I wanted to change everything according to 
 ! the brand's style. All css is well commented and organized though. */
 
+
+
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -1165,6 +1167,16 @@ button.woocommerce-form-login__submit:hover {
     transition: border-color 0.2s ease;
 }
 
+.wpforms-form input[type="text"]::placeholder,
+.wpforms-form input[type="email"]::placeholder,
+.wpforms-form textarea::placeholder {
+    color: #777;
+    opacity: 1;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
 .wpforms-form input:focus,
 .wpforms-form textarea:focus {
     outline: none !important;
@@ -1212,17 +1224,47 @@ button.woocommerce-form-login__submit:hover {
 }
 
 button.wpforms-submit {
-    background-color: #000 !important;
-    color: #fff !important;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    min-width: 220px;
+    background: linear-gradient(135deg, #ebebeb 0%, #edebeb 100%) !important;
+    color: #000000 !important;
     border: 3px solid #000 !important;
     border-radius: 0 !important;
-    padding: 15px 50px !important;
+    padding: 16px 48px !important;
     font-weight: 900 !important;
     text-transform: uppercase !important;
-    letter-spacing: 0.2em !important;
+    letter-spacing: 0.18em !important;
+    line-height: 1;
     box-shadow: 6px 6px 0px #FF1493 !important;
-    transition: all 0.2s ease !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease !important;
     cursor: pointer;
+    appearance: none;
+}
+
+button.wpforms-submit:hover {
+    background: #FF1493 !important;
+    color: #fff !important;
+    transform: translate(-3px, -3px);
+    box-shadow: 10px 10px 0px #000 !important;
+}
+
+button.wpforms-submit:focus-visible {
+    outline: 3px solid #FFB800;
+    outline-offset: 3px;
+}
+
+button.wpforms-submit:active {
+    transform: translate(-1px, -1px);
+    box-shadow: 4px 4px 0px #000 !important;
+}
+
+button.wpforms-submit[disabled] {
+    opacity: 0.65;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none !important;
 }
 
 button.wpforms-submit:hover {
@@ -1799,6 +1841,13 @@ button.wpforms-submit:hover {
         width: 100% !important;
         min-width: 0 !important;
         box-sizing: border-box;
+    }
+
+    button.wpforms-submit {
+        width: 100% !important;
+        min-width: 0;
+        padding-left: 1.25rem !important;
+        padding-right: 1.25rem !important;
     }
 
     .woocommerce-tabs ul.tabs,
